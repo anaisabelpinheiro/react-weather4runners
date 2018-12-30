@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 import WeatherIcon from "./WeatherIcon";
+import Search from "./Search";
+import CurrentLocation from "./CurrentLocation.js";
 import "./App.css";
 
 export default class App extends Component {
@@ -73,7 +75,7 @@ export default class App extends Component {
           <div className="row">
             <div className="col-md-6">
               <div className="clearfix">
-               
+              
                 <div className="weather-temp weather-temp--today">
                   {this.state.conditions.temperature}
                   <WeatherIcon  icon={this.state.conditions.icon}/>
@@ -90,6 +92,12 @@ export default class App extends Component {
               <div className="weather-detail__text">
                 Wind: {this.state.conditions.wind}
               </div>
+              <br>
+              </br>
+              {<Search refresh={this.refreshWeatherFromCity} />}
+            {<CurrentLocation
+              refresh={this.refreshWeatherFromLatitudeAndLongitude}
+            />}
             </div>
           </div>
         </div>
@@ -103,4 +111,3 @@ export default class App extends Component {
     }
   }
 }
- 

@@ -39,7 +39,7 @@ input[type="text"] {
 .weather-container {
   box-shadow: 10px 10px 10px 10px rgba(0.16, 0.16, 0.16, 0.16), 10px 10px 10px 10px rgba(0.16, 0.16, 0.16, 0.16);
   margin: 20px 0;
-  max-width: auto;
+  max-width: 630px;
   padding: 20px 0px 10px 16px;
 }
 
